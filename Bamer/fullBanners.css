@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.fb {
+  width: 728px;
+  height: 90px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+  overflow: hidden;
+  background-image: url('afb/schermCode.png');
+  color: #fff;
+  background-size: cover;
+  animation: achterAnimatie 8s alternate infinite;
+  cursor: pointer;
+}
+@keyframes achterAnimatie {
+  0%, 10% { background-position: top }
+  90%, 100% { background-position: bottom }
+}
+
+.fb__laag1 {
+  display: grid;
+  grid-template-columns: repeat(4, auto) 88px;
+  padding-left: 60px;
+  overflow: hidden;
+  transition: margin-top .5s cubic-bezier(.23,.19,.76,1.52);
+}
+
+.fb__laag1 > div {
+  height: 90px;
+  line-height: 88px;
+}
+
+.fb__wat, .fb__weet, .fb__Thom, .fb__ballon,
+.fb__html, .fb__css, .fb__js {
+  transition: transform .5s cubic-bezier(.23,.19,.76,1.52);
+}
+.fb__wat.fb--uit {
+  transform: translateY(-90px);
+}
+.fb__weet.fb--uit {
+  transform: translateY(90px);
+}
+.fb__Thom.fb--uit {
+  transform: translateY(-90px);
+}
+.fb__waggel {
+  display: inline-block;
+}
+.fb__waggel.fb--waggel {
+  animation: waggelen 1s forwards;
+}
+@keyframes waggelen {
+  0%, 70%, 100% { transform: rotate(0)}
+  10% { transform: rotate(-23deg)}
+  20% { transform: rotate(20deg)}
+  30% { transform: rotate(-12deg)}
+  40% { transform: rotate(10deg)}
+  50% { transform: rotate(-6deg)}
+  60% { transform: rotate(3deg)}
+}
+.fb__nl {
+  color: #333;
+  z-index: 2;
+}
+.fb__laag1 .fb__ballon {
+  width: 1.6em;
+  height: 1.6em;
+  background-color: #fff;
+  border-radius: 1em;
+  align-self: center;
+  transform: translateX(-4.1em) translateY(0);
+}
+.fb__laag1 .fb__ballon.fb--uit {
+  transform: translateX(-4.1em) translateY(90px);
+}
+.fb:hover .fb__ballon {
+  background: red;
+}
+.fb__laag1.fb--uit{
+  margin-top: -90px;
+}
+.fb__laag2 {
+   display: grid;
+    grid-template-columns: 1fr 80px 80px 88px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    overflow: hidden;
+}
+
+.fb__tut {
+  letter-spacing: -.1em;
+  padding-left: 2.5em;
+}
+
+.fb__tut.fb--uit span {
+  display: inline-block;
+  animation: blob .7s forwards;
+  opacity: 0;
+}
+@keyframes blob {
+  0% { opacity: 0; transform: scale(9)}
+  90% { opacity: 1; transform: scale(.9)}
+  100% {opacity: 1; transform: scale(1)}
+}
+.fb__tut.fb--uit .l2 { animation-delay: .1s; }
+.fb__tut.fb--uit .l3 { animation-delay: .2s; }
+.fb__tut.fb--uit .l4 { animation-delay: .3s; }
+.fb__tut.fb--uit .l5 { animation-delay: .4s; }
+.fb__tut.fb--uit .l6 { animation-delay: .5s; }
+.fb__tut.fb--uit .l7 { animation-delay: .6s; }
+.fb__tut.fb--uit .l8 { animation-delay: .7s; }
+.fb__tut.fb--uit .l9 { animation-delay: .8s; }
+
+.fb__html, .fb__css {
+  height: 80px;
+  align-self: center;
+}
+
+.fb__html.fb--uit {
+  transform: translateY(-90px);
+
+}
+.fb__css.fb--uit {
+  transform: translateY(90px);
+
+}.fb__js.fb--uit {
+  transform: translateX(90px);
+}
+.fb__js {
+  height: 88px;
+}
